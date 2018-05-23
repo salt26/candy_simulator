@@ -46,13 +46,18 @@ int main() {
 			pick[i] = 0;
 			cherry_num++;
 			cout<<"c ";
+			fout<<"cherry,";
 		} else {
 			pick[i] = 1;
 			lime_num++;
 			cout<<"l ";
+			fout<<"lime,";
 		}
 	}
 	cout<<endl<<"cherry: "<<cherry_num<<" / lime: "<<lime_num<<endl;
+	fout<<endl<<"# of cherry,"<<cherry_num<<",# of lime,"<<lime_num<<endl<<endl;
+	
+	fout<<"P(h1|d),P(h2|d),P(h3|d),P(h4|d),P(h5|d),P(D=lime|d)"<<endl;
 	
 	for (h = 1; h <= 5; h++) {
 		dh[h-1][0] = 1;
